@@ -1,0 +1,10 @@
+Instrucoes (resumidas) para o uso do MetaCorretor:
+
+1 - Copie o executável (MetaCorretor.exe) para a mesma pasta onde estão os arquivos .MEM a serem testados;
+2 - Copie o script de testes (arquivo .RAC) para esta mesma pasta;
+3 - Execute o MetaCorretor e selecione o processador desejado;
+3 - Quando for pedido um arquivo de comandos, selecione o arquivo .RAC onde estão seus casos de teste;
+5 - Quando a correção encerrar, será criado um arquivo .RAS na mesma pasta onde está o programa de correção. Esse arquivo contém os resultados dos testes (abra com o seu editor de texto preferido e verifique os resultados)
+
+
+Observacao: o MetaCorretor corrige todos os arquivos .MEM existentes na pasta em que se encontra. Assim, para nao produzir efeitos indesejados, remova desta pasta todos os arquivos *.MEM que não sejam uma solução para o problema proposto.
