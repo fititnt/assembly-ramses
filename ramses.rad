@@ -1,0 +1,9 @@
+; DADOS
+          ORG 208
+LUCRO:    DAB [16]
+
+          ORG 224
+VISITAS:  DAB [31]
+
+          ORG 255
+TOTAL:    DB 0
