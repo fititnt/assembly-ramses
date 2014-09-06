@@ -1,9 +1,26 @@
-; DADOS
+;;;;;;;;;;;;;;;;;;; DADOS
           ORG 208
-LUCRO:    DAB [16]
+;LUCRO:    DAB [16]
+LUCRO:    DAB 5,7,9,-1,-2,-3
 
           ORG 224
-VISITAS:  DAB [31]
+;;;VISITAS:  DAB [31]
+VISITAS:  DAB 4,2,4,0,4
 
           ORG 255
 TOTAL:    DB 0
+
+;;;;;;;;;;;;;;;;;;; PROGRAMA
+          ORG 0
+          LDR A 224         ; Carrega no registrador A o total
+          LDR B #0          ; Zera o total
+
+LOOPWHILE:
+          SUB A #1
+
+SOMAVAIUM:
+
+SOMANVAIUM:
+
+FIM:
+          HLT

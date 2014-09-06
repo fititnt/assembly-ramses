@@ -3,3 +3,7 @@ Símbolo     Valor Decimal   Valor Hexadecimal
 LUCRO                 208                  D0
 VISITAS               224                  E0
 TOTAL                 255                  FF
+LOOPWHILE               4                   4
+SOMAVAIUM               6                   6
+SOMANVAIUM              6                   6
+FIM                     6                   6

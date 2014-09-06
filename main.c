@@ -36,14 +36,14 @@ unsigned char VISITAS[] = {30,0,2,4,6,8,10,12,14,1,3,5,7,9,11,13,15,15,13,12,11,
 //unsigned char VISITAS[] = {13,0,1,2,3,4,8,9,10,11,15,1,7,9,5};
 
 int calculo() {
-  int i = 1, soma = 0;
+  int itens = VISITAS[0], lucro = 0;
 
-  while (i <= VISITAS[0]) {
-    printf("Visita: %d Cidade: %d Lucro Atual: %d\n", i, VISITAS[i], LUCRO[VISITAS[i]]);
-    soma += LUCRO[VISITAS[i]];
-    i++;
+  while (itens != 0) {
+    printf("Visita: %d Cidade: %d Lucro Atual: %d\n", itens, VISITAS[itens], LUCRO[VISITAS[itens]]);
+    lucro += LUCRO[VISITAS[itens]];
+    --itens;
   }
-  return soma;
+  return lucro;
 }
 
 /*
