@@ -12,15 +12,19 @@ TOTAL:    DB 0
 
 ;;;;;;;;;;;;;;;;;;; PROGRAMA
           ORG 0
-          LDR A 224         ; Carrega no registrador A o total
-          LDR B #0          ; Zera o total
+          LDR B #0          ; lucro = 0
+          LDR A 224         ; itens = VISITAS[0]
 
 LOOPWHILE:
+          JZ FIM            ; while (itens != 0) {
+
           SUB A #1
 
 SOMAVAIUM:
 
 SOMANVAIUM:
+
+          JMP LOOPWHILE     ; }
 
 FIM:
           HLT

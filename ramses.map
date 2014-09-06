@@ -4,6 +4,6 @@ LUCRO                 208                  D0
 VISITAS               224                  E0
 TOTAL                 255                  FF
 LOOPWHILE               4                   4
-SOMAVAIUM               6                   6
-SOMANVAIUM              6                   6
-FIM                     6                   6
+SOMAVAIUM               8                   8
+SOMANVAIUM              8                   8
+FIM                    10                   A
