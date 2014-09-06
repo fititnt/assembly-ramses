@@ -15,16 +15,25 @@ TOTAL:    DB 0
           LDR B #0          ; lucro = 0
           LDR A 224         ; itens = VISITAS[0]
 
+          LDR X #224        ; Obter final do array. Inicio + quantidade
+
 LOOPWHILE:
           JZ FIM            ; while (itens != 0) {
 
-          SUB A #1
+
+
+                            ; lucro += LUCRO[VISITAS[itens]];
+
+          ADD B 224
 
 SOMAVAIUM:
 
 SOMANVAIUM:
+          SUB X #1          ; Altera ponteiro de interesse
+          SUB A #1          ; --itens;
 
           JMP LOOPWHILE     ; }
 
 FIM:
+          STR A TOTAL
           HLT
