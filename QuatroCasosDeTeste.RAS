@@ -132,22 +132,18 @@ Valor inicial do PC e' 0
 Numero maximo de instrucoes e' 640000
 
 Arquivo ramses.mem:
- Teste 1: HLT -- Resultado incorreto
-  End.255 contem 15; deveria ser 10
-  1 erro em 1 endereco
-  Executadas 212 instrucoes, com 212 leituras e 0 escritas (212 acessos)
+ Teste 1: HLT -- Resultado correto
+  Executadas 24 instrucoes, com 48 leituras e 1 escritas (49 acessos)
  Teste 2: HLT -- Resultado incorreto
-  End.255 contem 15; deveria ser 172
+  End.255 contem 226; deveria ser 172
   1 erro em 1 endereco
-  Executadas 210 instrucoes, com 210 leituras e 0 escritas (210 acessos)
- Teste 3: HLT -- Resultado incorreto
-  End.255 contem 15; deveria ser 0
-  1 erro em 1 endereco
-  Executadas 215 instrucoes, com 215 leituras e 0 escritas (215 acessos)
+  Executadas 128 instrucoes, com 256 leituras e 1 escritas (257 acessos)
+ Teste 3: HLT -- Resultado correto
+  Executadas 8 instrucoes, com 16 leituras e 1 escritas (17 acessos)
  Teste 4: HLT -- Resultado incorreto
-  End.255 contem 15; deveria ser 52
+  End.255 contem 80; deveria ser 52
   1 erro em 1 endereco
-  Executadas 216 instrucoes, com 216 leituras e 0 escritas (216 acessos)
- 4 erros em 4 testes
- 4 erros em 4 testes
+  Executadas 60 instrucoes, com 120 leituras e 1 escritas (121 acessos)
+ 2 erros em 4 testes
+ 2 erros em 4 testes
 

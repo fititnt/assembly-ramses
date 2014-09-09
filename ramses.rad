@@ -4,40 +4,35 @@
 LUCRO:    DAB 5,7,9,-1,-2,-3
 
           ORG 224
-;;;VISITAS:  DAB [31]
+;VISITAS:  DAB [31]
 VISITAS:  DAB 4,2,4,0,4
 
           ORG 255
 TOTAL:    DB 0
 
+; Registrador A: Total parcial
+; Registrador X: Quantidade itens restantes
+
 ;;;;;;;;;;;;;;;;;;; PROGRAMA
           ORG 0
-          LDR B #0          ; lucro = 0
-          LDR A 224         ; itens = VISITAS[0]
+          LDR A #0 ; Remover
+          LDR B #0 ; Remover
+          LDR X #0 ; Remover
 
-          LDR X #208        ; Ponteiro, Inicio do array
-          ADD X 224         ; Ponteiro agora no final do array
+          LDR A #0          ; lucro = 0
+          LDR X 224         ; qtd_itens = VISITAS[0]
 
 LOOPWHILE:
           JZ FIM            ; while (itens != 0) {
-
-
-
-                            ; lucro += LUCRO[VISITAS[itens]];
-
-;; @todo resolver problema com modo indexado
-          ;;LDR B 224,X
-          ;;LDR B 224
-          ADD B 224
+          ADD A 224,X      ; lucro += LUCRO[VISITAS[itens]];
 
 SOMAVAIUM:
 
 SOMANVAIUM:
-          SUB X #1          ; Ponteiro volta uma casa
-          SUB A #1          ; --itens;
+          SUB X #1          ; --itens;
 
           JMP LOOPWHILE     ; }
 
 FIM:
-          STR B TOTAL
+          STR A TOTAL
           HLT
