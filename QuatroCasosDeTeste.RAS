@@ -133,17 +133,13 @@ Numero maximo de instrucoes e' 640000
 
 Arquivo ramses.mem:
  Teste 1: HLT -- Resultado correto
-  Executadas 37 instrucoes, com 71 leituras e 1 escritas (72 acessos)
- Teste 2: HLT -- Resultado incorreto
-  End.255 contem 226; deveria ser 172
-  1 erro em 1 endereco
-  Executadas 219 instrucoes, com 409 leituras e 1 escritas (410 acessos)
+  Executadas 35 instrucoes, com 78 leituras e 5 escritas (83 acessos)
+ Teste 2: HLT -- Resultado correto
+  Executadas 217 instrucoes, com 494 leituras e 31 escritas (525 acessos)
  Teste 3: HLT -- Resultado correto
-  Executadas 9 instrucoes, com 19 leituras e 1 escritas (20 acessos)
- Teste 4: HLT -- Resultado incorreto
-  End.255 contem 80; deveria ser 52
-  1 erro em 1 endereco
-  Executadas 100 instrucoes, com 188 leituras e 1 escritas (189 acessos)
- 2 erros em 4 testes
- 2 erros em 4 testes
+  Executadas 7 instrucoes, com 14 leituras e 1 escritas (15 acessos)
+ Teste 4: HLT -- Resultado correto
+  Executadas 98 instrucoes, com 222 leituras e 14 escritas (236 acessos)
+ Todos os testes corretos
+ Todos os testes corretos
 

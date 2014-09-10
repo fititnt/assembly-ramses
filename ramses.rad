@@ -1,51 +1,43 @@
 ;;;;;;;;;;;;;;;;;;; DADOS
-          ORG 208
-;LUCRO:    DAB [16]
-LUCRO:    DAB 5,7,9,-1,-2,-3
+                ORG 208
+;LUCRO:         DAB [16]
+LUCRO:          DAB 5,7,9,-1,-2,-3
 
-          ORG 224
-;VISITAS:  DAB [31]
-VISITAS:  DAB 4,2,4,0,4
+                ORG 224
+;VISITAS:      DAB [31]
+VISITAS:        DAB 4,2,4,0,4
 
-          ORG 255
-TOTAL:    DB 0
+                ORG 255
+TOTAL:          DB 0
 
-          ORG 200
-LAGORA:   DB 0
+                ORG 200
+LUCRO_POS:      DB 0
+                ORG 201
+VIS_P:          DB 224
 
-; Registrador A: Total parcial
-; Registrador X: Quantidade itens restantes
+; Registrador X: Quantidade de itens restantes do Loop
+; Registrador B: Temporario (Posição do lucro da visita atual)
+; Registrador A: Lucro (acumulador)
 
 ;;;;;;;;;;;;;;;;;;; PROGRAMA
-          ORG 0
-          LDR A #0 ; Remover
-          LDR B #0 ; Remover
-          LDR X #0 ; Remover
-
-          LDR A #0          ; lucro = 0
-          LDR X #208        ; Primeiro item de Lucros
-          LDR B 224         ; qtd_itens = VISITAS[0]
-
-LOOPWHILE:
-          JZ FIM            ; while (itens != 0) {
+                ORG 0
+                LDR A #0          ; Debug, Remover 
+                LDR B #0          ; Debug, Remover
+                LDR X #0          ; Debug, Remover
 
 
+                LDR X 224         ; qtd_itens = VISITAS[0]
 
-          ;ADD A 224,X      ; lucro += LUCRO[VISITAS[itens]];
-          ADD A VAGORA,X    ; lucro += LUCRO[VISITAS[itens]];
+LOOP:
+                JZ FIM            ; while (qtd_itens != 0) {
 
-          JC SOMAVAIUM
-          JMP SOMANVAIUM
+                LDR B 224,X       ; VISITAS[qtd_itens]
+                ADD B #208
+                STR B LUCRO_POS
+                ADD A LUCRO_POS,I ; lucro += LUCRO[VISITAS[qtd_itens]];
 
-SOMAVAIUM:
-          ADD A #1
-
-SOMANVAIUM:
-          SUB X #1
-          SUB B #1          ; --itens;
-
-          JMP LOOPWHILE     ; }
-
+                SUB X #1          ; --itens;
+                JMP LOOP          ; }
 FIM:
           STR A TOTAL
           HLT
