@@ -1,0 +1,33 @@
+;;;;;;;;;;;;;;;;;;; DADOS
+                ORG 208
+;LUCRO:         DAB [16]
+LUCRO:          DAB 5,7,9,-1,-2,-3
+
+                ORG 224
+;VISITAS:      DAB [31]
+VISITAS:        DAB 4,2,4,0,4
+
+                ORG 255
+TOTAL:          DB 0
+
+; Registrador A: Quantidade de itens restantes do Loop
+; Registrador B: Temporario (Posição do lucro da visita atual)
+; Registrador X: Inicio do array de visitas
+
+;;;;;;;;;;;;;;;;;;; PROGRAMA
+                ORG 0
+                LDR A #0          ; Debug, Remover 
+                LDR B #0          ; Debug, Remover
+                LDR X #0          ; Debug, Remover
+
+                LDR X #255        ; Início do array de visitas
+                LDR A 224         ; qtd_itens = VISITAS[0]
+
+LOOP:
+                JZ FIM            ; while (qtd_itens != 0) {
+
+                SUB A #1          ; --itens;
+                JMP LOOP          ; }
+FIM:
+          ;STR A TOTAL
+          HLT

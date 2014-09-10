@@ -11,7 +11,7 @@ VISITAS:  DAB 4,2,4,0,4
 TOTAL:    DB 0
 
           ORG 200
-VAGORA:   DB 225
+LAGORA:   DB 0
 
 ; Registrador A: Total parcial
 ; Registrador X: Quantidade itens restantes
@@ -23,11 +23,14 @@ VAGORA:   DB 225
           LDR X #0 ; Remover
 
           LDR A #0          ; lucro = 0
-          LDR X #225        ; primeiro item
+          LDR X #208        ; Primeiro item de Lucros
           LDR B 224         ; qtd_itens = VISITAS[0]
 
 LOOPWHILE:
           JZ FIM            ; while (itens != 0) {
+
+
+
           ;ADD A 224,X      ; lucro += LUCRO[VISITAS[itens]];
           ADD A VAGORA,X    ; lucro += LUCRO[VISITAS[itens]];
 
