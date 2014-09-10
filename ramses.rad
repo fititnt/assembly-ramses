@@ -10,6 +10,9 @@ VISITAS:  DAB 4,2,4,0,4
           ORG 255
 TOTAL:    DB 0
 
+          ORG 200
+VAGORA:   DB 225
+
 ; Registrador A: Total parcial
 ; Registrador X: Quantidade itens restantes
 
@@ -20,16 +23,23 @@ TOTAL:    DB 0
           LDR X #0 ; Remover
 
           LDR A #0          ; lucro = 0
-          LDR X 224         ; qtd_itens = VISITAS[0]
+          LDR X #225        ; primeiro item
+          LDR B 224         ; qtd_itens = VISITAS[0]
 
 LOOPWHILE:
           JZ FIM            ; while (itens != 0) {
-          ADD A 224,X      ; lucro += LUCRO[VISITAS[itens]];
+          ;ADD A 224,X      ; lucro += LUCRO[VISITAS[itens]];
+          ADD A VAGORA,X    ; lucro += LUCRO[VISITAS[itens]];
+
+          JC SOMAVAIUM
+          JMP SOMANVAIUM
 
 SOMAVAIUM:
+          ADD A #1
 
 SOMANVAIUM:
-          SUB X #1          ; --itens;
+          SUB X #1
+          SUB B #1          ; --itens;
 
           JMP LOOPWHILE     ; }
 
