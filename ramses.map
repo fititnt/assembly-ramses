@@ -4,6 +4,5 @@ LUCRO                 208                  D0
 VISITAS               224                  E0
 TOTAL                 255                  FF
 LUCRO_POS             200                  C8
-VIS_P                 201                  C9
-LOOP                    8                   8
-FIM                    22                  16
+LOOP                    2                   2
+FIM                    16                  10

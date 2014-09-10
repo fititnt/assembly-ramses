@@ -1,19 +1,18 @@
+; Copyright © 2014 Emerson Rocha Luiz <emerson@alligo.com.br>
+; License: WTFPL
+
 ;;;;;;;;;;;;;;;;;;; DADOS
                 ORG 208
-;LUCRO:         DAB [16]
-LUCRO:          DAB 5,7,9,-1,-2,-3
+LUCRO:          DAB [16]
 
                 ORG 224
-;VISITAS:      DAB [31]
-VISITAS:        DAB 4,2,4,0,4
+VISITAS:        DAB [31]
 
                 ORG 255
 TOTAL:          DB 0
 
                 ORG 200
 LUCRO_POS:      DB 0
-                ORG 201
-VIS_P:          DB 224
 
 ; Registrador X: Quantidade de itens restantes do Loop
 ; Registrador B: Temporario (Posição do lucro da visita atual)
@@ -21,10 +20,6 @@ VIS_P:          DB 224
 
 ;;;;;;;;;;;;;;;;;;; PROGRAMA
                 ORG 0
-                LDR A #0          ; Debug, Remover 
-                LDR B #0          ; Debug, Remover
-                LDR X #0          ; Debug, Remover
-
 
                 LDR X 224         ; qtd_itens = VISITAS[0]
 

@@ -1,8 +1,6 @@
 /* 
- * File:   main.c
- * Author: fititnt
- *
- * Created on 5 de Setembro de 2014, 15:25
+ * Copyright © 2014 Emerson Rocha Luiz <emerson@alligo.com.br>
+ * License: WTFPL
  */
 
 #include <stdio.h>
